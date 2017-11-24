@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="Vue.js 2.0 把 1.0 中的 $dispatch 和 $broadcast 删除了，并给出了下面的理由： 因为基于组件树结构的事件流方式实在是让人难以理解，并且在组件结构扩展的过程中会变得越来越脆弱。这种事件方式确实不太好，我们也不希望在以后让开发者们太痛苦。并且 $dispatch 和 $broadcast">
+<meta name="description" content="Vue.js 2.0 把 1.0 中的 $dispatch 和 $broadcast 删除了，并给出了下面的理由：  因为基于组件树结构的事件流方式实在是让人难以理解，并且在组件结构扩展的过程中会变得越来越脆弱。这种事件&amp;gt; 方式确实不太好，我们也不希望在以后让开发者们太痛苦。并且 $dispatch 和 ">
 <meta name="keywords" content="Vue.js">
 <meta property="og:type" content="article">
 <meta property="og:title" content="谈谈 Event Emitter">
 <meta property="og:url" content="http://yoursite.com/2017/11/24/talk-event-emitter/index.html">
 <meta property="og:site_name" content="Ax">
-<meta property="og:description" content="Vue.js 2.0 把 1.0 中的 $dispatch 和 $broadcast 删除了，并给出了下面的理由： 因为基于组件树结构的事件流方式实在是让人难以理解，并且在组件结构扩展的过程中会变得越来越脆弱。这种事件方式确实不太好，我们也不希望在以后让开发者们太痛苦。并且 $dispatch 和 $broadcast 也没有解决兄弟组件间的通信问题。 并且，Vue.js 本身推荐在复杂情况下应该">
+<meta property="og:description" content="Vue.js 2.0 把 1.0 中的 $dispatch 和 $broadcast 删除了，并给出了下面的理由：  因为基于组件树结构的事件流方式实在是让人难以理解，并且在组件结构扩展的过程中会变得越来越脆弱。这种事件&amp;gt; 方式确实不太好，我们也不希望在以后让开发者们太痛苦。并且 $dispatch 和 $broadcast 也没有解决&amp;gt; 兄弟组件间的通信问题。  并且，Vue.js">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-11-24T16:02:18.000Z">
+<meta property="og:updated_time" content="2017-11-24T16:05:11.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="谈谈 Event Emitter">
-<meta name="twitter:description" content="Vue.js 2.0 把 1.0 中的 $dispatch 和 $broadcast 删除了，并给出了下面的理由： 因为基于组件树结构的事件流方式实在是让人难以理解，并且在组件结构扩展的过程中会变得越来越脆弱。这种事件方式确实不太好，我们也不希望在以后让开发者们太痛苦。并且 $dispatch 和 $broadcast 也没有解决兄弟组件间的通信问题。 并且，Vue.js 本身推荐在复杂情况下应该">
+<meta name="twitter:description" content="Vue.js 2.0 把 1.0 中的 $dispatch 和 $broadcast 删除了，并给出了下面的理由：  因为基于组件树结构的事件流方式实在是让人难以理解，并且在组件结构扩展的过程中会变得越来越脆弱。这种事件&amp;gt; 方式确实不太好，我们也不希望在以后让开发者们太痛苦。并且 $dispatch 和 $broadcast 也没有解决&amp;gt; 兄弟组件间的通信问题。  并且，Vue.js">
 
 
 
@@ -301,7 +301,9 @@
 
       
         <p><a href="https://cn.vuejs.org/" target="_blank" rel="noopener">Vue.js</a> 2.0 把 1.0 中的 <code>$dispatch</code> 和 <code>$broadcast</code> 删除了，并给出了下面的理由：</p>
-<p>因为基于组件树结构的事件流方式实在是让人难以理解，并且在组件结构扩展的过程中会变得越来越脆弱。这种事件方式确实不太好，我们也不希望在以后让开发者们太痛苦。并且 <code>$dispatch</code> 和 <code>$broadcast</code> 也没有解决兄弟组件间的通信问题。</p>
+<blockquote>
+<p>因为基于组件树结构的事件流方式实在是让人难以理解，并且在组件结构扩展的过程中会变得越来越脆弱。这种事件&gt; 方式确实不太好，我们也不希望在以后让开发者们太痛苦。并且 <code>$dispatch</code> 和 <code>$broadcast</code> 也没有解决&gt; 兄弟组件间的通信问题。</p>
+</blockquote>
 <p>并且，Vue.js 本身推荐在复杂情况下应该使用  <a href="https://vuex.vuejs.org/" target="_blank" rel="noopener">Vuex</a>  来管理状态，我觉得这句话应该有一个前提，那就是你的组件本身与业务逻辑关联性很强，换句话说，就是这组件不适合迁移到别的项目或者共享给其他人。之所以要用到 Vuex 最主要的原因是因为项目已经拓展到一定规模，状态已经非常乱了，使用 Vuex 可以让状态管理清晰起来。如果项目本身是一个小官网，你想使用一个开源组件，但是这个组件却要求你加载 Vuex，这明显不合理。</p>
 <p><code>$dispatch</code> 和 <code>$broadcast</code> 本身并非一无是处，虽然在 Vue.js 2.0 废除了，但是其实很多开源框架中仍然有使用，比如 <a href="https://www.iviewui.com/" target="_blank" rel="noopener">iView</a>、<a href="http://element.eleme.io/#/zh-CN" target="_blank" rel="noopener">ElementUI</a> 等开源 UI 框架。</p>
 <p>我们先看回 Vue.js。在 Vue.js 中，父子组件间交互的方式是：父组件将数据传递给子组件的方式是通过 <code>props</code> ，这里数据的传递是单向的，父组件传递给子组件的那些 <code>props</code> 改变了，那么，子组件能够实时监测到。而子组件想要把数据传递给父组件的话，得通过触发事件的方式来传递。这是父子组件间传递数据的方式，兄弟组件间传递数据的方式可以定义一个空的 Vue.js 实例，通过这个空实例，可以达到兄弟组件间数据的传递。兄弟、父子组件有了，祖父、孙子组件呢？祖父、孙子组件没办法跟父子组件传递数据的方式一样一层层传递下去，只能跟兄弟组件一样定义一个空实例来传递数据。</p>
