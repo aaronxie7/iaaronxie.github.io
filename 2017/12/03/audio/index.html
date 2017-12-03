@@ -79,13 +79,17 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="Ax">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta name="description" content="这篇文章不会考虑 IE 浏览器，原因在于浏览器的语音识别依赖于两个核心 API，分别为：navigator.getUserMedia 和 AudioContext。IE 并不支持这两个 API，如果想要兼容 IE，可以参考下这篇文章。 在 Web 中，语音识别的实现方式基本上大同小异，基本上都会经历以下 4 个步">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Web 语音识别">
+<meta property="og:url" content="http://yoursite.com/2017/12/03/audio/index.html">
 <meta property="og:site_name" content="Ax">
+<meta property="og:description" content="这篇文章不会考虑 IE 浏览器，原因在于浏览器的语音识别依赖于两个核心 API，分别为：navigator.getUserMedia 和 AudioContext。IE 并不支持这两个 API，如果想要兼容 IE，可以参考下这篇文章。 在 Web 中，语音识别的实现方式基本上大同小异，基本上都会经历以下 4 个步骤：  获取浏览器麦克风权限 将用户使用麦克风说出的语音转换成实际的音频文件 将">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2017-12-03T13:34:43.848Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Ax">
+<meta name="twitter:title" content="Web 语音识别">
+<meta name="twitter:description" content="这篇文章不会考虑 IE 浏览器，原因在于浏览器的语音识别依赖于两个核心 API，分别为：navigator.getUserMedia 和 AudioContext。IE 并不支持这两个 API，如果想要兼容 IE，可以参考下这篇文章。 在 Web 中，语音识别的实现方式基本上大同小异，基本上都会经历以下 4 个步骤：  获取浏览器麦克风权限 将用户使用麦克风说出的语音转换成实际的音频文件 将">
 
 
 
@@ -115,13 +119,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/12/03/audio/"/>
 
 
 
 
 
-  <title>Ax</title>
+  <title>Web 语音识别 | Ax</title>
   
 
 
@@ -140,8 +144,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -214,9 +217,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -246,9 +249,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/12/03/audio/" itemprop="url">Web 语音识别</a></h1>
+          <h1 class="post-title" itemprop="name headline">Web 语音识别</h1>
         
 
         <div class="post-meta">
@@ -298,9 +299,7 @@
       
 
       
-        
-          
-            <p>这篇文章不会考虑 IE 浏览器，原因在于浏览器的语音识别依赖于两个核心 API，分别为：<code>navigator.getUserMedia</code> 和 <code>AudioContext</code>。IE 并不支持这两个 API，如果想要兼容 IE，可以参考下<a href="http://varyu.com/notes/293.html" target="_blank" rel="noopener">这篇文章</a>。</p>
+        <p>这篇文章不会考虑 IE 浏览器，原因在于浏览器的语音识别依赖于两个核心 API，分别为：<code>navigator.getUserMedia</code> 和 <code>AudioContext</code>。IE 并不支持这两个 API，如果想要兼容 IE，可以参考下<a href="http://varyu.com/notes/293.html" target="_blank" rel="noopener">这篇文章</a>。</p>
 <p>在 Web 中，语音识别的实现方式基本上大同小异，基本上都会经历以下 4 个步骤：</p>
 <ul>
 <li>获取浏览器麦克风权限</li>
@@ -315,8 +314,6 @@
 <h2 id="将音频文件发送给服务器、服务器解析结果并返回给用户"><a href="#将音频文件发送给服务器、服务器解析结果并返回给用户" class="headerlink" title="将音频文件发送给服务器、服务器解析结果并返回给用户"></a>将音频文件发送给服务器、服务器解析结果并返回给用户</h2><p>上一步 <code>recorder.js</code> 已经将语音转换成可以发送给服务器的格式，接下来只要正常请求将文件发送给服务器，服务器使用微信、百度等开源库将语音解析成实际的文字返回给用户就可以了。</p>
 <p>完。</p>
 
-          
-        
       
     </div>
     
@@ -333,145 +330,28 @@
       
 
       
-
-      
-
       
       
-        <div class="post-eof"></div>
+
       
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/11/24/talk-event-emitter/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Ax">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/11/24/talk-event-emitter/" itemprop="url">谈谈 Event Emitter</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
             
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-11-24T23:56:14+08:00">
-                2017-11-24
-              </time>
+              <a href="/2017/11/24/talk-event-emitter/" rel="next" title="谈谈 Event Emitter">
+                <i class="fa fa-chevron-left"></i> 谈谈 Event Emitter
+              </a>
             
+          </div>
 
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
             
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
+          </div>
         </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          
-            <p><a href="https://cn.vuejs.org/" target="_blank" rel="noopener">Vue.js</a> 2.0 把 1.0 中的 <code>$dispatch</code> 和 <code>$broadcast</code> 删除了，并给出了下面的理由：</p>
-<blockquote>
-<p>因为基于组件树结构的事件流方式实在是让人难以理解，并且在组件结构扩展的过程中会变得越来越脆弱。这种事件&gt; 方式确实不太好，我们也不希望在以后让开发者们太痛苦。并且 <code>$dispatch</code> 和 <code>$broadcast</code> 也没有解决&gt; 兄弟组件间的通信问题。</p>
-</blockquote>
-<p>并且，Vue.js 本身推荐在复杂情况下应该使用  <a href="https://vuex.vuejs.org/" target="_blank" rel="noopener">Vuex</a>  来管理状态，我觉得这句话应该有一个前提，那就是你的组件本身与业务逻辑关联性很强，换句话说，就是这组件不适合迁移到别的项目或者共享给其他人。之所以要用到 Vuex 最主要的原因是因为项目已经拓展到一定规模，状态已经非常乱了，使用 Vuex 可以让状态管理清晰起来。如果项目本身是一个小官网，你想使用一个开源组件，但是这个组件却要求你加载 Vuex，这明显不合理。</p>
-<p><code>$dispatch</code> 和 <code>$broadcast</code> 本身并非一无是处，虽然在 Vue.js 2.0 废除了，但是其实很多开源框架中仍然有使用，比如 <a href="https://www.iviewui.com/" target="_blank" rel="noopener">iView</a>、<a href="http://element.eleme.io/#/zh-CN" target="_blank" rel="noopener">ElementUI</a> 等开源 UI 框架。</p>
-<p>我们先看回 Vue.js。在 Vue.js 中，父子组件间交互的方式是：父组件将数据传递给子组件的方式是通过 <code>props</code> ，这里数据的传递是单向的，父组件传递给子组件的那些 <code>props</code> 改变了，那么，子组件能够实时监测到。而子组件想要把数据传递给父组件的话，得通过触发事件的方式来传递。这是父子组件间传递数据的方式，兄弟组件间传递数据的方式可以定义一个空的 Vue.js 实例，通过这个空实例，可以达到兄弟组件间数据的传递。兄弟、父子组件有了，祖父、孙子组件呢？祖父、孙子组件没办法跟父子组件传递数据的方式一样一层层传递下去，只能跟兄弟组件一样定义一个空实例来传递数据。</p>
-<p>在使用开源组件过程中，一般我们以下面的方式调用组件：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;component-name</span><br><span class="line">  :foo=&quot;true&quot;</span><br><span class="line">  @bar=&quot;bar&quot;&gt;</span><br><span class="line">&lt;/component-name&gt;</span><br></pre></td></tr></table></figure></p>
-<p>如果这个开源组件因为本身的原因，内部有一个孙子组件，<code>bar</code> 事件刚好作为孙子组件的单击事件，这时候应该怎么做？其实这个时候可以在孙子组件里面以 <code>$parent</code> 变量层层调用到 <code>&lt;component-name&gt;</code>，然后再触发事件。这里我们有一个前提，这是个开源组件，也就是说孙子组件我们是没法控制的，所以以空实例来作为事件总线有点不现实。</p>
-<p>上面我们说到的  “以 <code>$parent</code> 变量层层调用到 <code>&lt;component-name&gt;</code>，然后再触发事件”  其实就是 <code>dispatch</code> 而相反以 <code>$children</code> 层层调用到特定子元素，则是 <code>broadcast</code>。我们可以看下下面这个是 ElementUI 本身对这两种操作的实现：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">function broadcast(componentName, eventName, params) &#123;</span><br><span class="line">  this.$children.forEach(child =&gt; &#123;</span><br><span class="line">    var name = child.$options.componentName;</span><br><span class="line">    </span><br><span class="line">    if (name === componentName) &#123;</span><br><span class="line">      child.$emit.apply(child, [eventName].concat(params));</span><br><span class="line">    &#125; else &#123;</span><br><span class="line">      broadcast.apply(child, [componentName, eventName].concat([params]));</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;</span><br><span class="line">export default &#123;</span><br><span class="line">  methods: &#123;</span><br><span class="line">    dispatch(componentName, eventName, params) &#123;</span><br><span class="line">      var parent = this.$parent || this.$root;</span><br><span class="line">      var name = parent.$options.componentName;</span><br><span class="line"></span><br><span class="line">      while (parent &amp;&amp; (!name || name !== componentName)) &#123;</span><br><span class="line">        parent = parent.$parent;</span><br><span class="line">        </span><br><span class="line">        if (parent) &#123;</span><br><span class="line">          name = parent.$options.componentName;</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">      if (parent) &#123;</span><br><span class="line">        parent.$emit.apply(parent, [eventName].concat(params));</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    broadcast(componentName, eventName, params) &#123;</span><br><span class="line">      broadcast.call(this, componentName, eventName, params);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure></p>
-<p>上面这段代码需要修改点代码才能用在别的地方，原因在于这句代码 <code>$options.componentName</code> 正常的 Vue.js 组件是不会有 <code>componentName</code> 这个字段的，你可以换成 <code>name</code> 字段。上面这段代码其实并不难，基本的逻辑都是一层层找到特定的组件，然后使用 <code>$emit</code> 来触发事件，并把参数传递过去。</p>
-<p>最后，我们再谈谈为什么 Vue.js 要废除 <code>$dispatch</code> 和 <code>$broadcast</code>，对于业务组件在说，Vue.js 建议的是使用 Vuex，但是对于那些开源的组件呢？其实正如官方建议所说的，在组件拓展过程中使用 <code>$dispatch</code> 和 <code>$broadcast</code>  确实让代码变得脆弱，哪里都可以去触发事件，会让组件的清晰程度变低。究其深层意思，其实 Vue.js 更希望开源组件能以下面这种形式来调用：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;grand-parent&gt;</span><br><span class="line">  &lt;parent&gt;</span><br><span class="line">    &lt;child&gt;&lt;/child&gt;</span><br><span class="line">  &lt;/parent&gt;</span><br><span class="line">&lt;/grand-parent&gt;</span><br></pre></td></tr></table></figure></p>
-<p>以上面形式调用就不用担心孙子组件怎么去触发祖父组件的事件，代码也非常地清晰。</p>
-<p>完。</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -481,10 +361,11 @@
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -492,6 +373,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -628,6 +513,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.3"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.3"></script>
+
+
 
   
 
